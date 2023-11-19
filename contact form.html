@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .contact-container {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .left-section {
+      flex: 1;
+      height: 100vh;
+      background: url('cover.jpg') center/cover no-repeat; /* Replace 'your-image.jpg' with your actual image URL */
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .right-section {
+      flex: 1;
+      padding: 20px;
+      background-color: rgb(204, 240, 131);
+    }
+
+    h1 {
+      margin-bottom: 20px;
+      color:yellow);
+    }
+
+    .contact-info {
+      margin-bottom: 20px;
+      color: yellowgreen;
+    }
+
+    form {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      box-sizing: border-box;
+    }
+
+    input[type="submit"] {
+      background-color: #4caf50;
+      color: white;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="contact-container">
+    <div class="left-section">
+      <h1>Contact Us</h1>
+      <div class="contact-info">
+        <p>Address: ARKHAM CITY</p>
+        <p>Phone: 09613999666</p>
+        <p>Email: batmandoesntsleep@gmail.com</p>
+      </div>
+    </div>
+    
+    <div class="right-section">
+      <form action="contact.php" method="post">
+        <label for="fname">First Name:</label>
+        <input type="text" id="fname" name="fname" required>
+
+        <label for="lname">Last Name:</label>
+        <input type="text" id="lname" name="lname" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <input type="submit" value="Send Message">
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>
